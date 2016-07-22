@@ -1,0 +1,311 @@
+body{
+    background: #f5f5f5;
+    min-width: 300px;
+}
+.jd_top{
+    width: 100%;
+    height: 45px;
+    border-bottom: 1px solid #e0e0e0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    position: static;
+}
+.jd_top [class^='icon_']{
+    position: absolute;
+    top: 0;
+    width: 40px;
+    height: 44px;
+    padding: 12px 10px;
+    background-clip: content-box;
+    background-origin:content-box;
+}
+.jd_top h3{
+    text-align: center;
+    font-weight: normal;
+    line-height: 44px
+}
+.jd_top .icon_back{
+    left: 0;
+    background-position:-20px 0;
+}
+.jd_top .icon_list{
+    right: 0;
+    background-position: -60px 0;
+}
+/*安全提示*/
+.jd_safetip{
+    height: 34px;
+    border-bottom: 1px solid #e0e0e0;
+    background: #fff;
+    line-height: 34px;
+    text-align: center;
+}
+.jd_safetip p{
+    display: inline-block;
+    position: relative;
+    padding-left: 23px;
+    font-size: 12px;
+    color: #666;
+}
+.jd_safetip p::before{
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 0px;
+    background: url("../images/safe_icon.png");
+    background-size: 18px 18px;
+    width: 18px;
+    height: 18px;;
+}
+/*店铺*/
+.js_shop{
+    margin-top: 10px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background: #fff;
+}
+.jd_shop_tit{
+    height: 34px;
+    line-height: 34px;
+    position: relative;
+}
+.left_con .jd_check_box{
+    background: url("../images/shop-icon.png");
+    background-size: 50px 100px;
+    width: 40px;
+    height: 34px;
+    padding: 7px 10px;
+    background-clip: content-box;
+    background-origin: content-box;
+    display: block;
+}
+.jd_check_box[checked]{
+    background-position: -25px 0;
+}
+.left_con{
+    width: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.tit_right{
+    padding-left: 40px;
+    width: 100%;
+}
+.tit_right .shop_logo{
+    width: 15px;
+    height: 13px;
+    float: left;
+    margin-top: 10px;
+}
+.tit_right .shop_name{
+    float: left;
+    margin-left: 10px;
+}
+.tit_right .shop_tip{
+    float: right;
+    font-size: 12px;
+    color: #D8505C;
+    margin-right: 10px;
+}
+.jd_product{
+    height: 100px;
+    border-top: 1px solid #ccc;
+    position: relative;
+    padding: 10px 0;
+}
+.right_con{
+    padding-left: 40px;
+}
+.product_img{
+    float: left;
+    width: 80px;
+    height: 80px;
+}
+.product_img img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.product_info{
+    overflow: hidden;
+    padding: 0 10px;
+}
+.product_info .info_name{
+    height: 30px;
+    line-height: 15px;
+    display: block;
+    overflow: hidden;
+}
+.info_price{
+    color:red;
+    padding-top: 5px;
+}
+.change_num{
+    float: left;
+}
+.change_num span{
+    border: 1px solid #ccc;
+    height: 24px;
+    width: 32px;
+    text-align: center;
+    line-height: 24px;
+    float: left;
+    cursor: pointer;
+}
+.change_num span:first-of-type{
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+.change_num span:last-of-type{
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+.change_num input{
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    height: 24px;
+    width: 32px;
+    text-align: center;
+    line-height: 24px;
+    float: left;
+}
+.change_num>i{
+    /*display: block;*/
+    float: left;
+    display: none;
+    background-color: #e92322;
+    color: white;
+    height: 30px;
+    line-height: 30px;
+}
+
+.delete_btn{
+    float: right;
+}
+.delete_btn .delete_up{
+    display: block;
+    height: 5px;
+    width: 20px;
+    background: url("../images/delete_up.png") no-repeat;
+    background-size: 20px 5px;
+    margin-left: -1px;
+
+}
+.delete_btn .delete_down{
+    width: 18px;
+    height: 18px;
+    display: block;
+    background: url("../images/delete_down.png") no-repeat;
+    background-size: 18px 18px;
+    margin-top: -2px;
+}
+/*弹出框*/
+.mask{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: none;
+}
+.delete_tip{
+    background-color: red;
+    position: absolute;
+    top: 34%;
+    left: 50%;
+    width: 85%;
+    background: #fff;
+    border-radius: 4px;
+    padding: 10px;
+    transform: translate3d(-50%,-50%,0);
+    /*padding-bottom: 40px;*/
+}
+.mask>.delete_tip.myBounceInDown{
+    -webkit-animation: myBounceInDown 1s;
+    animation: myBounceInDown 1s;
+}
+.delete_tip .tip_text{
+    font-size: 18px;
+    line-height: 75px;
+    text-align: center;
+    border-bottom: 1px solid #cccccc;
+}
+.delete_OK{
+    width: 100%;
+}
+.delete_OK .cancel{
+    float: left;
+    height: 36px;
+    line-height: 36px;
+    width: 45%;
+    font-size: 18px;
+    text-align: center;
+    border: 1px solid #666;
+    border-radius: 4px;
+
+}
+.delete_OK .submit{
+    float: right;
+    height: 36px;
+    line-height: 36px;
+    width: 45%;
+    font-size: 18px;
+    text-align: center;
+    background-color: #D8505C;
+    border-radius: 4px;
+}
+/*动画*/
+/*translate3d 调用 硬件加速   GPU */
+@-webkit-keyframes myBounceInDown{
+    0%{
+        opacity: 0;
+        -webkit-transform: translate3d(-50%,-1000%,0);
+        transform: translate3d(-50%,-1000%,0);
+    }
+    60%{
+        opacity: 1;
+        -webkit-transform: translate3d(-50%,-42%,0);
+        transform: translate3d(-50%,-42%,0);
+    }
+    75%{
+        -webkit-transform: translate3d(-50%,-55%,0);
+        transform: translate3d(-50%,-55%,0);
+    }
+    90%{
+        -webkit-transform: translate3d(-50%,-48%,0);
+        transform: translate3d(-50%,-48%,0);
+    }
+    100%{
+        -webkit-transform: translate3d(-50%,-50%,0);
+        transform: translate3d(-50%,-50%,0);
+    }
+}
+@keyframes myBounceInDown{
+    0%{
+        opacity: 0;
+        -webkit-transform: translate3d(-50%,-1000%,0);
+        transform: translate3d(-50%,-1000%,0);
+    }
+    60%{
+        opacity: 1;
+        -webkit-transform: translate3d(-50%,-42%,0);
+        transform: translate3d(-50%,-42%,0);
+    }
+    75%{
+        -webkit-transform: translate3d(-50%,-55%,0);
+        transform: translate3d(-50%,-55%,0);
+    }
+    90%{
+        -webkit-transform: translate3d(-50%,-48%,0);
+        transform: translate3d(-50%,-48%,0);
+    }
+    100%{
+        -webkit-transform: translate3d(-50%,-50%,0);
+        transform: translate3d(-50%,-50%,0);
+    }
+}
